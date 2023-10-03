@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grid-final-project</title>
+
+		<script
+			src="https://kit.fontawesome.com/1387792aac.js"
+			crossorigin="anonymous"
+		></script>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<div class="hamburger">
+			<div class="hamburger__bar"></div>
+			<div class="hamburger__bar"></div>
+			<div class="hamburger__bar"></div>
+		</div>
+		<div class="sidebar">
+			<div class="sidebar__logo-container">
+				<div class="sidebar__logo">
+					<i class="fa-solid fa-bolt"></i>
+				</div>
+				<h2 class="sidebar__title">Dashboard</h2>
+				<button class="btn__close">
+					<i class="fa-solid fa-xmark"></i>
+				</button>
+			</div>
+			<nav class="sidebar__nav">
+				<ul>
+					<li class="sidebar__link">
+						<i class="fa-solid fa-chart-pie"></i>
+						<p>Overview</p>
+					</li>
+					<li class="sidebar__link">
+						<i class="fa-regular fa-calendar"></i>
+						<p>Plans</p>
+					</li>
+					<li class="sidebar__link">
+						<i class="fa-solid fa-bars-progress"></i>
+						<p>Tasks</p>
+					</li>
+					<li class="sidebar__link">
+						<i class="fa-solid fa-arrow-trend-up"></i>
+						<p>Trends</p>
+					</li>
+					<li class="sidebar__link">
+						<i class="fa-solid fa-user-group"></i>
+						<p>Contacts</p>
+					</li>
+					<li class="sidebar__link">
+						<i class="fa-regular fa-newspaper"></i>
+						<p>Articles</p>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<i class="fa-solid fa-gear"></i>
+						<p>Settings</p>
+					</li>
+					<li>
+						<i class="fa-solid fa-right-from-bracket"></i>
+						<p>Logout</p>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+		<main class="main">
+			<header class="header">
+				<h1 class="header__title">Overview</h1>
+				<div class="header__user">
+					<div class="header__icons">
+						<input type="text" class="search-input" placeholder=" " />
+						<!-- <i class="fa-solid fa-magnifying-glass"></i> -->
+						<button class="header__btn">
+							<i class="fa-solid fa-bell"></i>
+						</button>
+					</div>
+					<p class="header__user-text">Tymo Huba</p>
+					<div class="header__user-img">
+						<img src="photo.jpg" alt="user_image" />
+					</div>
+				</div>
+			</header>
+
+			<div class="info__cards">
+				<div class="info__card">
+					<p>Open</p>
+					<p>88</p>
+				</div>
+				<div class="info__card">
+					<p>Resolved</p>
+					<p>133</p>
+				</div>
+				<div class="info__card">
+					<p>In progress</p>
+					<p>34</p>
+				</div>
+				<div class="info__card">
+					<p>On hold</p>
+					<p>200</p>
+				</div>
+			</div>
+
+			<div class="plans">
+				<!-- <h2 class="plans__title">Plans</h2> -->
+				<div class="plans__calendar">
+					<div class="plans__date">
+						<p class="plans__date-current"></p>
+						<div class="plans__date-buttons">
+							<button id="prev" class="plans__date-btn">
+								<i class="fa-solid fa-chevron-left"></i>
+							</button>
+							<button id="next" class="plans__date-btn">
+								<i class="fa-solid fa-chevron-right"></i>
+							</button>
+						</div>
+					</div>
+					<div class="plans__weeks">
+						<p>Sun</p>
+						<p>Mon</p>
+						<p>Tue</p>
+						<p>Wed</p>
+						<p>Thu</p>
+						<p>Fri</p>
+						<p>Sat</p>
+					</div>
+					<div class="plans__days">
+						<!-- <p class="day__inactive">31</p>
+					<p>1</p>
+					<p>2</p>
+					<p>3</p>
+					<p>4</p>
+					<p>5</p>
+					<p>6</p>
+					<p>7</p>
+					<p>8</p>
+					<p>9</p>
+					<p class="day__active">10</p>
+					<p>11</p>
+					<p>12</p>
+					<p>13</p>
+					<p>14</p>
+					<p>15</p>
+					<p>16</p>
+					<p>17</p>
+					<p>18</p>
+					<p>19</p>
+					<p>20</p>
+					<p>21</p>
+					<p>22</p>
+					<p>23</p>
+					<p>24</p>
+					<p>25</p>
+					<p>26</p>
+					<p>27</p>
+					<p>28</p>
+					<p>29</p>
+					<p>30</p>
+					<p>31</p>
+					<p class="day__inactive">1</p>
+					<p class="day__inactive">2</p>
+					<p class="day__inactive">3</p> -->
+					</div>
+					<div class="plans__event-controls">
+						<button id="today-search" class="plans__event-btn">Today</button>
+						<div class="plans__event-controls-date">
+							<input
+								type="text"
+								placeholder="mm/yyyy"
+								id="month-year-search"
+								class="plans__event-controls-input"
+							/>
+							<button class="plans__event-controls-btn" id="year-month-go">go</button>
+						</div>
+					</div>
+				</div>
+
+				<div class="plans__event">
+					<legend>Add event on <span class="selected-day"></span></legend>
+					<div class="plans__event-content">
+						<div class="plans__event-name">
+							<label for="event-name">Event name:</label>
+							<input type="text" id="event-name" name="event-name" class="event-name" />
+						</div>
+						<div class="plans__event-time-interval">
+							<div class="plans__event-from">
+								<label for="event-from-time">Starts at:</label>
+								<input type="text" id="event-from-time" class="event-time-input" />
+							</div>
+							<div class="plans__event-to">
+								<label for="event-to-time">End at:</label>
+								<input type="text" id="event-to-time" class="event-time-input" />
+							</div>
+						</div>
+						<!-- <div class="plans__event-hours">
+							<label for="event-hour-reminder">Event hour reminder:</label>
+							<input type="time" id="event-hour-reminder" name="event-hour-reminder" />
+						</div> -->
+					</div>
+					<!-- <div class="plans__event-error">
+						<p>Please fill comment / hour!</p>
+					</div> -->
+					<div class="plans__event-btns">
+						<button id="btn-add-event" class="plans__event-btn">Add</button>
+						<button id="btn-dismiss-event" class="plans__event-btn">Dismiss</button>
+					</div>
+				</div>
+
+				<div class="plans__event-day-list">
+					<h2 class="plans__event-day-list-title">
+						Event list at <span class="selected-day"></span>
+					</h2>
+					<div class="plans__event-day-list-container"></div>
+					<div class="plans__event-btns">
+						<button id="btn-add-list-event" class="plans__event-btn">Add</button>
+						<button id="btn-dismiss-list-event" class="plans__event-btn">Hide</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="cards">
+				<div class="card">
+					<div class="card__header">
+						<div class="card__header-title">
+							<h2>Tasks</h2>
+							<a href="#">View all</a>
+						</div>
+						<p>Today</p>
+					</div>
+					<div class="card__box">
+						<label class="card__form-check-label" for="urgent-radio">
+							<input type="checkbox" id="urgent-radio" class="card__form-check-input" />
+							Finish current tasks
+						</label>
+						<p class="card__text urgent-text">Urgent</p>
+					</div>
+					<div class="card__box">
+						<label class="card__form-check-label" for="new-radio">
+							<input type="checkbox" id="new-radio" class="card__form-check-input" />
+							Create new ticket example
+						</label>
+						<p class="card__text new-text">New</p>
+					</div>
+					<div class="card__box">
+						<label class="card__form-check-label" for="default-radio">
+							<input type="checkbox" id="default-radio" class="card__form-check-input" />
+							Update ticket report
+						</label>
+						<p class="card__text default-text">Default</p>
+					</div>
+					<div class="card__box">
+						<label class="card__form-check-label" for="close-radio">
+							<input type="checkbox" id="close-radio" class="card__form-check-input" />
+							Close ticket report
+						</label>
+						<p class="card__text close-text">Assigned</p>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card__header">
+						<div class="card__header-title">
+							<h2>Unsolved Tickets</h2>
+							<a href="#">View details</a>
+						</div>
+						<p>Support</p>
+					</div>
+					<div class="card__box">
+						<p class="card__main-text">Waiting on Future Request</p>
+						<p class="card__number">4225</p>
+					</div>
+					<div class="card__box">
+						<p class="card__main-text">Awaiting Customer Response</p>
+						<p class="card__number">1005</p>
+					</div>
+					<div class="card__box">
+						<p class="card__main-text">Awaiting Developer Fix</p>
+						<p class="card__number">908</p>
+					</div>
+					<div class="card__box">
+						<p class="card__main-text">Pending</p>
+						<p class="card__number">222</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="trends__container">
+				<div class="trends__chart">
+					<h2 class="trends__chart-title">Percentage choose %</h2>
+					<figure>
+						<svg class="trends__chart-set" viewBox="0 0 20 20">
+							<circle r="25" cx="50%" cy="50%" class="trends__chart-pie" />
+						</svg>
+					</figure>
+					<div class="trends__btns">
+						<button class="trends__btn" data-name="asia">Asia</button>
+						<button class="trends__btn" data-name="northAmerica">North America</button>
+						<button class="trends__btn" data-name="europe">Europe</button>
+						<button class="trends__btn" data-name="africa">Africa</button>
+						<button class="trends__btn" data-name="oceania">Oceania</button>
+					</div>
+				</div>
+				<div class="trends__status">
+					<div class="trends__item">
+						<h2 class="trends__item-title">Resolved</h2>
+						<p class="trends__item-value">449</p>
+					</div>
+					<div class="trends__item">
+						<h2 class="trends__item-title">Received</h2>
+						<p class="trends__item-value">553</p>
+					</div>
+					<div class="trends__item">
+						<h2 class="trends__item-title">Average response</h2>
+						<p class="trends__item-value">2h 14min</p>
+					</div>
+					<div class="trends__item">
+						<h2 class="trends__item-title">Resolution</h2>
+						<p class="trends__item-value">92.3%</p>
+					</div>
+				</div>
+			</div>
+			<div class="contacts"></div>
+			<div class="articles"></div>
+		</main>
+
+		<script src="./js/hamburgerControl.js"></script>
+		<script src="./js/calendarSet.js"></script>
+		<script src="./js/trendsSet.js"></script>
+	</body>
+</html>
